@@ -89,6 +89,17 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+
+                <h1>Hello, </h1>
+                <ul>
+                    <?php foreach ($names as $name): ?>
+                        <li><?=$name?></li>
+                    <?php endforeach; ?>
+
+                    @foreach ($names as $name)
+                        <li>{{$name}}</li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </body>

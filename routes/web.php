@@ -11,8 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function ()
+{
+    $names = ['Cena', 'Undertaker', 'Wyatt'];
+
+    return view('welcome', compact('names'));
 });
 
 Route::get('about', function ()
