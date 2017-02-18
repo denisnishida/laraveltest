@@ -38,7 +38,7 @@ Route::get('/names/{name}', function($id)
     return view('names.show', compact('name'));
 });
 
-Route::get('about', function ()
+Route::get('/about', function ()
 {
     return view('about');
 });
