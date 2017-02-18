@@ -11,6 +11,7 @@
 |
 */
 use Illuminate\Support\Facades\DB;
+use App\Task;
 
 Route::get('/', function ()
 {
@@ -22,20 +23,22 @@ Route::get('/', function ()
     return view('welcome');
 });
 
-Route::get('/names', function ()
+Route::get('/tasks', function ()
 {
     //$names = ['Cena', 'Undertaker', 'Wyatt'];
-    $names = DB::table('names')->latest()->get();
+    //$names = DB::table('names')->latest()->get();
+    $tasks = Task::all();
 
     //return $names;
-    return view('names.index', compact('names'));
+    return view('tasks.index', compact('tasks'));
 });
 
-Route::get('/names/{name}', function($id)
+Route::get('/tasks/{task}', function($id)
 {
-    $name = DB::table('names')->find($id);
+    //$name = DB::table('names')->find($id);
+    $task = Task::find($id);
     //dd($name);
-    return view('names.show', compact('name'));
+    return view('tasks.show', compact('task'));
 });
 
 Route::get('/about', function ()

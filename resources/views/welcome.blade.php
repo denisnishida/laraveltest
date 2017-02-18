@@ -91,8 +91,8 @@
                     <a href="/about">
                         About
                     </a>
-                    <a href="/names">
-                        See names table
+                    <a href="/tasks">
+                        Tasks
                     </a>
                 </div>
             </div>

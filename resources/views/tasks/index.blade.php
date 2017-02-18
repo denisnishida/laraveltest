@@ -12,10 +12,10 @@
             {{-- <li><!--?= $name->comment ?></li> --}}
         {{-- <!--?php endforeach; ?> --}}
 
-        @foreach ($names as $name)
+        @foreach ($tasks as $task)
             <li>
-              <a href="/names/{{$name->id}}">
-                {{ $name->comment }}
+              <a href="/tasks/{{$task->id}}">
+                {{ $task->body }}
               </a>
             </li>
         @endforeach
