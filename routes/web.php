@@ -13,15 +13,17 @@
 use Illuminate\Support\Facades\DB;
 use App\Task;
 
-Route::get('/', function ()
-{
-    //$names = ['Cena', 'Undertaker', 'Wyatt'];
-    //$names = DB::table('names')->latest()->get();
+Route::get('/', 'PostController@index');
 
-    //return $names;
-    // return view('welcome', compact('names'));
-    return view('welcome');
-});
+// Route::get('/', function ()
+// {
+//     //$names = ['Cena', 'Undertaker', 'Wyatt'];
+//     //$names = DB::table('names')->latest()->get();
+//
+//     //return $names;
+//     // return view('welcome', compact('names'));
+//     return view('welcome');
+// });
 
 Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/{task}', 'TasksController@show');
@@ -31,7 +33,7 @@ Route::get('/tasks/{task}', 'TasksController@show');
 //     //$names = ['Cena', 'Undertaker', 'Wyatt'];
 //     //$names = DB::table('names')->latest()->get();
 //     $tasks = Task::all();
-// 
+//
 //     //return $names;
 //     return view('tasks.index', compact('tasks'));
 // });
